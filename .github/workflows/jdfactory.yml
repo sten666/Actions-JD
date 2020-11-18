@@ -4,7 +4,7 @@
 #factory 
 #东东工厂
 
-name: factory
+name: jdfactory
 
 on:
   workflow_dispatch:
