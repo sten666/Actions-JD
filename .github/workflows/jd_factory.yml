@@ -23,7 +23,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          repository: 799953468/Quantumult-X/Scripts/JD
+          repository: 799953468/Quantumult-X
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
@@ -40,7 +40,7 @@ jobs:
           npm install
       - name: '运行 【东东工厂】'
         run: |
-          node jd_factory.js
+          node Scripts/JD/jd_factory.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           JD_DEBUG: ${{ secrets.JD_DEBUG }}
