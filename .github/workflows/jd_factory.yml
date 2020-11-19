@@ -5,7 +5,7 @@
   #factory 		
  #东东工厂		
 
-  name: 东东工厂		
+  name:东东工厂
 
   on:		
    workflow_dispatch:		
