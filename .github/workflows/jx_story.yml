@@ -40,7 +40,7 @@ jobs:
           npm install
       - name: '运行 【京喜金牌厂长】'
         run: |
-          npm run quanx/jx_story.js
+          node quanx/jx_story.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
