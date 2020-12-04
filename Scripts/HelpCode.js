@@ -7,9 +7,9 @@ const codeName = ['bean', 'farm', 'pet', 'ddfactory', 'jxfactory',];
 
 //种豆
 const bean = [
-‘kb6dfwffm5de3qsppipq5imwoe’,
-‘igefhjvuw6xvtwudb4nfz2bb6mgqjdfu4z5pqdi’,
-‘nkvdrkoit5o64fzuyn2cpskw7ov4ltqruczde5i’,
+'kb6dfwffm5de3qsppipq5imwoe',
+'igefhjvuw6xvtwudb4nfz2bb6mgqjdfu4z5pqdi',
+'nkvdrkoit5o64fzuyn2cpskw7ov4ltqruczde5i',
 ];
 
 //农场
