@@ -31,9 +31,7 @@ const ddfactory = [
 ];
 //京喜工厂
 const jxfactory = [
-    '7TX87_Q7WrOdagQsyrT5jROhjTOicfed_yTNSc5i7hA=',
-    'xCg9izIFhzbnJNK3wizsZg==',
-'ClLWsVHnYExlX6YxnnlYkG9njrYhttgc3ypxfbpsmnE=',
+    'szn5HuRcwXQIS3xXu0kONQ==',
 ];
 
 
