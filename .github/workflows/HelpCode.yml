@@ -33,7 +33,7 @@ jobs:
           npm install
       - name: "运行 【互助码提交】"
         run: |
-          node  Scripts/HelpCode2.js
+          node  Scripts/shareCode-auto.js
         env:
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
