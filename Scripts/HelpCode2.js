@@ -1,4 +1,5 @@
 //http://api.turinglabs.net/api/v1/jd/cleantimeinfo/
+//https://code.chiang.fun/api/v1/jd/cleantimeinfo/
 
 const $ = new Env('助力码提交');
 const notify = $.isNode() ? require('../sendNotify') : '';
@@ -46,7 +47,6 @@ const jdcrazyjoy = [
     't1SQQC-EfWQU3AEZE1XEAA==',
 ];
 
-//http://api.turinglabs.net/api/v1/jd/
 let url_HOST = '';
 var msgDetail = '';
 
@@ -54,9 +54,11 @@ var msgDetail = '';
     for (let i = 0; i < codeName.length; i++) {
         $.codeName = codeName[i];
         msgDetail = msgDetail + `--------${$.codeName}--------\n`;
-        for (let index = 0; index < eval($.codeName).length; index++) {
+        for (let index = 1; index < eval($.codeName).length; index++) {
+            $.url = eval($.codeName)[0];
             $.code = eval($.codeName)[index];
-            url_HOST = `https://code.chiang.fun/api/v1/jd/${$.codeName}/create/${$.code}`;
+            url_HOST = `${$.url}/${$.codeName}/create/${$.code}`;
+            console.log(url_HOST);
             await upCode(url_HOST);
         }
     }
