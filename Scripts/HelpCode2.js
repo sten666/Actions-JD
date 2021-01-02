@@ -8,6 +8,7 @@ const codeName = ['bean', 'farm', 'pet', 'ddfactory', 'jxfactory', 'jdzz','jdcra
 
 //种豆
 const bean = [
+'http://api.turinglabs.net/api/v1/jd',
 'kb6dfwffm5de3qsppipq5imwoe',
 'igefhjvuw6xvtwudb4nfz2bb6mgqjdfu4z5pqdi',
 'nkvdrkoit5o64fzuyn2cpskw7ov4ltqruczde5i',
@@ -15,33 +16,38 @@ const bean = [
 
 //农场
 const farm = [
+    'http://api.turinglabs.net/api/v1/jd',
     '922bd755c6e24857a67167559e3ff2f4',
     '151554d5dda24645af188d5584f3d1db',
     'd72fc4a73a774febb53a22394c7ea178',
 ];
 //萌宠
 const pet = [
+'http://api.turinglabs.net/api/v1/jd',
 'MTAxODc2NTEzMjAwMDAwMDAzMjUxNjIxMQ==',
     'MTE1NDUwMTI0MDAwMDAwMDM1MjA0MzIx',
     'MTE1NDAxNzcwMDAwMDAwMzYwODI1OTc=',
 ];
 //东东工厂
 const ddfactory = [
-    'P04z54XCjVWnYaS5m9cZyCbpz4S5p5aVP36sA',
+'http://api.turinglabs.net/api/v1/jd',   'P04z54XCjVWnYaS5m9cZyCbpz4S5p5aVP36sA',
     'P04z54XCjVWnYaS5nRRWT6mhg',
 ];
 //京喜工厂
 const jxfactory = [
+'http://api.turinglabs.net/api/v1/jd',
     'szn5HuRcwXQIS3xXu0kONQ==',
 ];
 //赚赚
 const jdzz = [
+'https://code.chiang.fun/api/v1/jd'
 'ASmwHwfPL',
 'AUWE5wNj2r1V_dCGyvisr',
 'AUWE5387qj217TQeemyYj',
 ];
 //合成joy
 const jdcrazyjoy = [
+'https://code.chiang.fun/api/v1/jd',
     'BNAIIfApNDaviHJ-z6iJBg==',
     'ZhPCEekO3ss=',
     't1SQQC-EfWQU3AEZE1XEAA==',
