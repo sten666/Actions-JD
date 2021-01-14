@@ -1,14 +1,14 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: 京东赚赚
+name: jd_jdzz
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 16 * * *'
-  # watch:
-  #   types: started
+    - cron: '10 2 * * *'
+  watch:
+    types: started
   repository_dispatch:
     types: jd_jdzz
 jobs:
@@ -18,8 +18,9 @@ jobs:
     if: github.event.repository.owner.id == github.event.sender.id
     steps:
       - name: Checkout
-        run: |
-          git clone -b master https://github.com/lxk0301/jd_scripts.git ~/scripts
+        uses: actions/checkout@v2
+        with:
+          repository: bcb9866219/jd_temp
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
@@ -31,17 +32,17 @@ jobs:
         with:
           path: node_modules
           key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('package-lock.json') }} # 使用 package-lock.json 的 Hash 作为缓存的 key。也可以使用 package.json 代替
+      - name: npm install
+        run: |
+          npm install
       - name: '运行 【京东赚赚】'
         run: |
-          cd  ~/scripts
-          npm install
           node jd_jdzz.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           JD_DEBUG: ${{ secrets.JD_DEBUG }}
-          JDZZ_SHARECODES: ${{ secrets.JDZZ_SHARECODES }}
-          JOY_RUN_FLAG: ${{ secrets.JOY_RUN_FLAG }}
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
+          JDZZ_SHARECODES: ${{ secrets.JDZZ_SHARECODES }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
           BARK_SOUND: ${{ secrets.BARK_SOUND }}
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
