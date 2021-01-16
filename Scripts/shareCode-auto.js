@@ -8,7 +8,9 @@ const shareCodes = [
     jxgc: $.getdata("jx_shareCode1") || "szn5HuRcwXQIS3xXu0kONQ==",
     jxzz: $.getdata("jx_zzshareCode1") || "ASmwHwfPL",
     crazyjoy: $.getdata("jd_joyshareCode1") || "BNAIIfApNDaviHJ-z6iJBg==",
+        cash: $.getdata("jd_cash_shareCode1") || "YkJmMrLp",
   },
+  
   {
     zd: $.getdata("zd_shareCode2") || "igefhjvuw6xvtwudb4nfz2bb6mgqjdfu4z5pqdi",
     nc: $.getdata("nc_shareCode2") || "151554d5dda24645af188d5584f3d1db",
@@ -17,6 +19,7 @@ const shareCodes = [
     jxgc: $.getdata("jx_shareCode2") || "",
     jxzz: $.getdata("jx_zzshareCode2") || "AUWE5wNj2r1V_dCGyvisr",
     crazyjoy: $.getdata("jd_joyshareCode2") || "ZhPCEekO3ss=",
+        cash: $.getdata("jd_cash_shareCode2") || "eU9YLI_IJKRVtAmzjSl6",
   },
   {
     zd: $.getdata("zd_shareCode3") || "nkvdrkoit5o64fzuyn2cpskw7ov4ltqruczde5i",
@@ -34,7 +37,8 @@ $.random = Math.floor(Math.random() * 60);
 !(async () => {
   console.log(`\n此脚本延迟${$.random}秒执行\n`);
   for (let i = 0; i < shareCodes.length; i++) {
-    const { zd, nc, mc, ddgc, jxgc, jxzz, crazyjoy } = shareCodes[i];
+    const { zd, nc, mc, ddgc, jxgc, jxzz, crazyjoy, cash } = shareCodes[i];
+
     await $.wait($.random);
     zd &&
       (await create(
@@ -77,6 +81,14 @@ $.random = Math.floor(Math.random() * 60);
         `https://code.chiang.fun/api/v1/jd/jdcrazyjoy/create/${crazyjoy}/`,
         "疯狂的joy"
       ));
+    await $.wait($.random);
+    cash &&
+      (await create(
+        `https://code.chiang.fun/api/v1/jd/jdcash/create/${cash}/`,
+        "签到领现金"
+      ));    
+
+      
   }
   await showMsg();
 })()
