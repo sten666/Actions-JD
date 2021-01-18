@@ -31,9 +31,9 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: "运行 【互助码提交】"
+      - name: "运行 【互助码获取】"
         run: |
-          node  Scripts/shareCode-auto.js
+          node  Scripts/jd_get_share_code.js.js
         env:
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
